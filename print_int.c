@@ -14,7 +14,8 @@ int print_int(va_list args)
 
     if (i < 0)
     {
-        _putchar((char)"-");
+        // _putchar("-");
+        _putchar(45);
         i *= -1;
         count++;
     }
