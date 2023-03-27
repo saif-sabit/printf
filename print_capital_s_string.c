@@ -18,7 +18,7 @@ int print_capital_s_string(va_list args)
 		if (s[i] < 32 || s[i] >= 127)
 		{
 			_putchar(92);
-			_putchar(92);
+			_putchar(120);
 			count++;
 			if (s[i] < 8)
 			{
@@ -28,6 +28,7 @@ int print_capital_s_string(va_list args)
 			else if (s[i] < 32)
 			{
 				_putchar('0');
+				_putchar(65);
 				count++;
 			}
 			count += print_octal(args);
