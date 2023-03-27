@@ -1,6 +1,6 @@
 # Implementation of Printf in C
 
-This is a simple implementation of the printf function in C. It is a project for the Facebook School curriculum.
+This is a simple implementation of the printf function in C. It is a project for ALX curriculum.
 
 ## Usage
 
