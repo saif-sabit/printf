@@ -1,30 +1,26 @@
-#include "../main.h"
+#include <string.h>
+#include "stdlib.h"
+#include "main.h"
 
 /**
- * print_int - prints an integer
+ * print_octal - prints an octal number
  * @args: list of arguments
  * Return: number of characters printed
  */
 
-int print_int(va_list args)
+int print_octal(va_list args)
 {
-    int i = va_arg(args, int);
+    unsigned int i = va_arg(args, unsigned int);
     int j = 0, k = 0, count = 0;
     char *s;
 
-    if (i < 0)
-    {
-        _putchar((char)"-");
-        i *= -1;
-        count++;
-    }
     s = malloc(sizeof(char) * 12);
     if (s == NULL)
         return (-1);
     while (i > 0)
     {
-        s[j] = (i % 10) + '0';
-        i /= 10;
+        s[j] = (i % 8) + '0';
+        i /= 8;
         j++;
     }
     for (k = j - 1; k >= 0; k--)

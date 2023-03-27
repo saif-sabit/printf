@@ -1,4 +1,4 @@
-#include "../main.h"
+#include "main.h"
 
 /**
  * print_rot13 - prints a string in rot13

@@ -1,12 +1,12 @@
-#include "../main.h"
+#include "main.h"
 
 /**
- * print_lower_x_hex - prints a hex number
+ * print_unsigned - prints an unsigned integer
  * @args: list of arguments
  * Return: number of characters printed
  */
 
-int print_lower_x_hex(va_list args)
+int print_unsigned(va_list args)
 {
     unsigned int i = va_arg(args, unsigned int);
     int j = 0, k = 0, count = 0;
@@ -17,10 +17,8 @@ int print_lower_x_hex(va_list args)
         return (-1);
     while (i > 0)
     {
-        s[j] = (i % 16) + '0';
-        if (s[j] > '9')
-            s[j] += 39;
-        i /= 16;
+        s[j] = (i % 10) + '0';
+        i /= 10;
         j++;
     }
     for (k = j - 1; k >= 0; k--)

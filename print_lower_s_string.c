@@ -1,4 +1,4 @@
-#include "../main.h"
+#include "main.h"
 
 /**
  * print_lower_s_string - prints a string

@@ -1,12 +1,12 @@
-#include "../main.h"
+#include "main.h"
 
 /**
- * print_capital_x_hex - prints a HEX number
+ * print_lower_x_hex - prints a hex number
  * @args: list of arguments
  * Return: number of characters printed
  */
 
-int print_capital_x_hex(va_list args)
+int print_lower_x_hex(va_list args)
 {
     unsigned int i = va_arg(args, unsigned int);
     int j = 0, k = 0, count = 0;
@@ -19,7 +19,7 @@ int print_capital_x_hex(va_list args)
     {
         s[j] = (i % 16) + '0';
         if (s[j] > '9')
-            s[j] += 7;
+            s[j] += 39;
         i /= 16;
         j++;
     }

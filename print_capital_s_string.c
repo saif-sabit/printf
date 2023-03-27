@@ -1,4 +1,4 @@
-#include "../main.h"
+#include "main.h"
 
 /**
  * print_capital_s_string - prints a string with non-printable characters
