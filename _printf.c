@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * _printf - prints anything
  * @fmt: string to be printed
@@ -9,15 +8,8 @@
 int _printf(const char *fmt, ...)
 {
 	int i = 0, j = 0, count = 0;
-	va_list args;
-	Prints prints[] = {{"c", print_char}, {"s", print_lower_s_string},
-		{"d", print_int}, {"i", print_int}, {"%", print_percent},
-		{"u", print_unsigned}, {"o", print_octal},
-		{"x", print_lower_x_hex}, {"X", print_capital_x_hex},
-		{"b", print_binary}, {"S", print_capital_s_string},
-		{"p", print_pointer}, {"r", print_rev}, {"R", print_rot13},
-		{NULL, NULL}};
-	va_start(args, fmt);
+
+	va_start(va_list args, fmt);
 
 	while (fmt && fmt[i])
 	{
