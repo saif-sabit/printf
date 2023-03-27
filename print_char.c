@@ -1,6 +1,5 @@
 #include "main.h"
 
-
 /**
  * print_char - prints a character
  * @args: list of arguments
@@ -9,7 +8,8 @@
 
 int print_char(va_list args)
 {
-    char c = va_arg(args, int); // means:
-    _putchar(c);
-    return (1);
+	char c = va_arg(args, int);
+
+	_putchar(c);
+	return (1);
 }
