@@ -14,7 +14,7 @@
 
 typedef struct Prints
 {
-	char *fmt;
+	char *c;
 	int (*f)(va_list);
 } Prints;
 
