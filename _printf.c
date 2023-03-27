@@ -25,12 +25,6 @@ int _printf(const char *format, ...)
 					i++;
 					break;
 				}
-				// else
-				// {
-				// 	_putchar(format[i]);
-				// 	count++;
-				// 	break;
-				// }
 				j++;
 			}
 			if (prints[j].c == NULL && format[i + 1] != ' ')
