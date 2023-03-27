@@ -24,7 +24,7 @@ int print_pointer(va_list args)
 		j++;
 	}
 	_putchar('0');
-    _putchar('x');
+	_putchar('x');
 	count += 2;
 	for (k = j - 1; k >= 0; k--)
 	{

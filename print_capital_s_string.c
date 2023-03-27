@@ -18,7 +18,7 @@ int print_capital_s_string(va_list args)
 		if (s[i] < 32 || s[i] >= 127)
 		{
 			_putchar(92);
-            _putchar(92);
+			_putchar(92);
 			count++;
 			if (s[i] < 8)
 			{
