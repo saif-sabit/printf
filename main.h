@@ -2,7 +2,6 @@
 #define PRINTF_MAIN_H
 
 #include <stdarg.h>
-#include <stdarg.h>
 #include <string.h>
 #include <stdlib.h>
 #include <unistd.h>
@@ -19,13 +18,7 @@ typedef struct Prints
 	int (*f)(va_list);
 } Prints;
 
-Prints prints[] = {{"c", print_char}, {"s", print_lower_s_string},
-	{"d", print_int}, {"i", print_int}, {"%", print_percent},
-	{"u", print_unsigned}, {"o", print_octal},
-	{"x", print_lower_x_hex}, {"X", print_capital_x_hex},
-	{"b", print_binary}, {"S", print_capital_s_string},
-	{"p", print_pointer}, {"r", print_rev}, {"R", print_rot13},
-	{NULL, NULL}};
+
 
 int _printf(const char *format, ...);
 int _putchar(char c);

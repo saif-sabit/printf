@@ -17,16 +17,17 @@ int print_capital_s_string(va_list args)
 	{
 		if (s[i] < 32 || s[i] >= 127)
 		{
-			_putchar((char)"\\");
+			_putchar(92);
+            _putchar(92);
 			count++;
 			if (s[i] < 8)
 			{
-				_putchar((char)"00");
+				_putchar('0');
 				count += 2;
 			}
 			else if (s[i] < 32)
 			{
-				_putchar((char)"0");
+				_putchar('0');
 				count++;
 			}
 			count += print_octal(args);
