@@ -7,7 +7,7 @@
  */
 int _printf(const char *format, ...)
 {
-	Prints prints[] = {{"c", print_char}, {"s", print_lower_s_string},{"d", print_int}, {"i", print_int}, {"%", print_percent}, {"o", print_octal}, {"x", print_lower_x_hex}, {"X", print_capital_x_hex}, {"b", print_binary}, {"S", print_capital_s_string}, {"p", print_pointer}, {"R", print_rot13}, {"u", print_unsigned}, {NULL, NULL}};
+	Prints prints[] = {{"c", print_char}, {"s", print_lower_s_string}, {"d", print_int}, {"i", print_int}, {"%", print_percent}, {"o", print_octal}, {"x", print_lower_x_hex}, {"X", print_capital_x_hex}, {"b", print_binary}, {"S", print_capital_s_string}, {"p", print_pointer}, {"R", print_rot13}, {"u", print_unsigned}, {NULL, NULL}};
 	int i = 0, j = 0, count = 0;
 	va_list args;
 
@@ -25,12 +25,12 @@ int _printf(const char *format, ...)
 					i++;
 					break;
 				}
-				else
-				{
-					_putchar(format[i]);
-					count++;
-					break;
-				}
+				// else
+				// {
+				// 	_putchar(format[i]);
+				// 	count++;
+				// 	break;
+				// }
 				j++;
 			}
 			if (prints[j].c == NULL && format[i + 1] != ' ')
