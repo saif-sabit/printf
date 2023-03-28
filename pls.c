@@ -2,13 +2,12 @@
 
 /**
  * pls - prints a string
- * @args: list of arguments
+ * @s: list of arguments
  * Return: number of characters printed
  */
 
-int pls(va_list args)
+int pls(char *s)
 {
-	char *s = va_arg(args, char *);
 	int i = 0;
 
 	if (s == NULL)

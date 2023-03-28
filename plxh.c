@@ -2,13 +2,12 @@
 
 /**
  * plxh - prints a hex number
- * @args: list of arguments
+ * @i: list of arguments
  * Return: number of characters printed
  */
 
-int plxh(va_list args)
+int plxh(unsigned int i)
 {
-	unsigned int i = va_arg(args, unsigned int);
 	int j = 0, k = 0, count = 0;
 	char *s;
 

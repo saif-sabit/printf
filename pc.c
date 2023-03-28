@@ -2,14 +2,12 @@
 
 /**
  * pc - prints a character
- * @args: list of arguments
+ * @c: list of arguments
  * Return: number of characters printed
  */
 
-int pc(va_list args)
+int pc(char c)
 {
-	char c = va_arg(args, int);
-
 	_putchar(c);
 	return (1);
 }

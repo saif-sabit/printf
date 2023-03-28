@@ -4,13 +4,12 @@
 
 /**
  * po - prints an octal number
- * @args: list of arguments
+ * @i: list of arguments
  * Return: number of characters printed
  */
 
-int po(va_list args)
+int po(unsigned int i)
 {
-	unsigned int i = va_arg(args, unsigned int);
 	int j = 0, k = 0, count = 0;
 	char *s;
 

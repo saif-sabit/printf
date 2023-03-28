@@ -2,13 +2,12 @@
 
 /**
  * pr - prints a string in rot13
- * @args: list of arguments
+ * @s: list of arguments
  * Return: number of characters printed
  */
 
-int pr(va_list args)
+int pr(char *s)
 {
-	char *s = va_arg(args, char *);
 	int i = 0, j = 0, count = 0;
 	char *alpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	char *rot13 = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";

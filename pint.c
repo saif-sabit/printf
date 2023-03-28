@@ -2,13 +2,12 @@
 
 /**
  * pint - prints an integer
- * @args: list of arguments
+ * @i: list of arguments
  * Return: number of characters printed
  */
 
-int pint(va_list args)
+int pint(int  i)
 {
-	int i = va_arg(args, int);
 	int j = 0, k = 0, count = 0;
 	char *s;
 

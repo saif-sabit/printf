@@ -2,13 +2,12 @@
 
 /**
  * pcs - prints a string with non-printable characters
- * @args: list of arguments
+ * @s: list of arguments
  * Return: number of characters printed
  */
 
-int pcs(va_list args)
+int pcs(char *s)
 {
-	char *s = va_arg(args, char *);
 	int i = 0, count = 0;
 
 	if (s == NULL)
@@ -30,7 +29,7 @@ int pcs(va_list args)
 				_putchar('0');
 				count++;
 			}
-			count += po(args);
+			count += po(s[i]);
 		}
 		else
 		{

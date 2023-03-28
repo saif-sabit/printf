@@ -2,13 +2,12 @@
 
 /**
  * ptr - prints a pointer
- * @args: list of arguments
+ * @i: list of arguments
  * Return: number of characters printed
  */
 
-int ptr(va_list args)
+int ptr(unsigned long int i)
 {
-	unsigned long int i = va_arg(args, unsigned long int);
 	int j = 0, k = 0, count = 0;
 	char *s;
 
