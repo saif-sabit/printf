@@ -28,15 +28,10 @@ Prints prints[] = {{"c", pc}, {"s", pls}, {"S", pcs}, {"x", plxh},
 				}
 				j++;
 			}
-			if (prints[j].fmt == NULL && fmt[i + 1] != ' ')
+			if (prints[j].fmt == NULL && fmt[i + 1] != ' ' && (fmt[i + 1] != '\0'))
 			{
-				if (fmt[i + 1] != '\0')
-				{
-					_putchar(fmt[i]);
-					count++;
-				}
-				else
-					return (-1);
+				_putchar(fmt[i]);
+				count++;
 			}
 		}
 		else
