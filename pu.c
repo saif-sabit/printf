@@ -1,23 +1,17 @@
 #include "main.h"
 
 /**
- * print_int - prints an integer
+ * pu - prints an unsigned integer
  * @args: list of arguments
  * Return: number of characters printed
  */
 
-int print_int(va_list args)
+int pu(va_list args)
 {
-	int i = va_arg(args, int);
+	unsigned int i = va_arg(args, unsigned int);
 	int j = 0, k = 0, count = 0;
 	char *s;
 
-	if (i < 0)
-	{
-		_putchar('-');
-		i *= -1;
-		count++;
-	}
 	s = malloc(sizeof(char) * 12);
 	if (s == NULL)
 		return (-1);

@@ -1,12 +1,14 @@
+#include <string.h>
+#include "stdlib.h"
 #include "main.h"
 
 /**
- * print_binary - prints a binary number
+ * po - prints an octal number
  * @args: list of arguments
  * Return: number of characters printed
  */
 
-int print_binary(va_list args)
+int po(va_list args)
 {
 	unsigned int i = va_arg(args, unsigned int);
 	int j = 0, k = 0, count = 0;
@@ -17,8 +19,8 @@ int print_binary(va_list args)
 		return (-1);
 	while (i > 0)
 	{
-		s[j] = (i % 2) + '0';
-		i /= 2;
+		s[j] = (i % 8) + '0';
+		i /= 8;
 		j++;
 	}
 	for (k = j - 1; k >= 0; k--)

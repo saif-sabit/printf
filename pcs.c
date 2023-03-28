@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * print_capital_s_string - prints a string with non-printable characters
+ * pcs - prints a string with non-printable characters
  * @args: list of arguments
  * Return: number of characters printed
  */
 
-int print_capital_s_string(va_list args)
+int pcs(va_list args)
 {
 	char *s = va_arg(args, char *);
 	int i = 0, count = 0;
@@ -18,7 +18,7 @@ int print_capital_s_string(va_list args)
 		if (s[i] < 32 || s[i] >= 127)
 		{
 			_putchar(92);
-			_putchar(120);
+			_putchar(92);
 			count++;
 			if (s[i] < 8)
 			{
@@ -28,10 +28,9 @@ int print_capital_s_string(va_list args)
 			else if (s[i] < 32)
 			{
 				_putchar('0');
-				_putchar(65);
 				count++;
 			}
-			count += print_octal(args);
+			count += po(args);
 		}
 		else
 		{

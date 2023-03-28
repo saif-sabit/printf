@@ -1,25 +1,26 @@
 #include "main.h"
-#include <stdarg.h>
 /**
  * _printf - prints anything
- * @format: string to be printed
+ * @fmt: string to be printed
  * Return: number of characters printed
  */
-int _printf(const char *format, ...)
+int _printf(const char *fmt, ...)
 {
-	Prints prints[] = {{"c", print_char}, {"s", print_lower_s_string}, {"d", print_int}, {"i", print_int}, {"%", print_percent}, {"o", print_octal}, {"x", print_lower_x_hex}, {"X", print_capital_x_hex}, {"b", print_binary}, {"S", print_capital_s_string}, {"p", print_pointer}, {"R", print_rot13}, {"u", print_unsigned}, {NULL, NULL}};
+Prints prints[] = {{"c", pc}, {"s", pls}, {"S", pcs}, {"x", plxh},
+	{"d", pint}, {"i", pint}, {"%", pp}, {"u", pu}, {"o", po},
+	{"X", pcxh}, {"b", pb}, {"p", ptr}, {"R", pr}, {NULL, NULL}};
 	int i = 0, j = 0, count = 0;
 	va_list args;
 
-	va_start(args, format);
-	while (format && format[i])
+	va_start(args, fmt);
+	while (fmt && fmt[i])
 	{
-		if (format[i] == '%')
+		if (fmt[i] == '%')
 		{
 			j = 0;
-			while (prints[j].c)
+			while (prints[j].fmt)
 			{
-				if (format[i + 1] == *prints[j].c)
+				if (fmt[i + 1] == *prints[j].fmt)
 				{
 					count += prints[j].f(args);
 					i++;
@@ -27,19 +28,20 @@ int _printf(const char *format, ...)
 				}
 				j++;
 			}
-			if (prints[j].c == NULL && format[i + 1] != ' ')
+			if (prints[j].fmt == NULL && fmt[i + 1] != ' ')
 			{
-				if (format[i + 1] != '\0')
+				if (fmt[i + 1] != '\0')
 				{
-					_putchar(format[i]);
+					_putchar(fmt[i]);
 					count++;
 				}
-				return (-1);
+				else
+					return (-1);
 			}
 		}
 		else
 		{
-			_putchar(format[i]);
+			_putchar(fmt[i]);
 			count++;
 		}
 		i++;

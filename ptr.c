@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * print_pointer - prints a pointer
+ * ptr - prints a pointer
  * @args: list of arguments
  * Return: number of characters printed
  */
 
-int print_pointer(va_list args)
+int ptr(va_list args)
 {
 	unsigned long int i = va_arg(args, unsigned long int);
 	int j = 0, k = 0, count = 0;

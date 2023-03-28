@@ -14,7 +14,7 @@
 
 typedef struct Prints
 {
-	char *c;
+	char *fmt;
 	int (*f)(va_list);
 } Prints;
 
@@ -23,17 +23,17 @@ typedef struct Prints
 int _printf(const char *format, ...);
 int _putchar(char c);
 
-int print_binary(va_list args);
-int print_capital_s_string(va_list args);
-int print_capital_x_hex(va_list args);
-int print_char(va_list args);
-int print_int(va_list args);
-int print_lower_s_string(va_list args);
-int print_lower_x_hex(va_list args);
-int print_octal(va_list args);
-int print_percent(va_list args);
-int print_pointer(va_list args);
-int print_rot13(va_list args);
-int print_unsigned(va_list args);
+int pb(va_list args);
+int pcs(va_list args);
+int pcxh(va_list args);
+int pc(va_list args);
+int pint(va_list args);
+int pls(va_list args);
+int plxh(va_list args);
+int po(va_list args);
+int pp(va_list args);
+int ptr(va_list args);
+int pr(va_list args);
+int pu(va_list args);
 
 #endif

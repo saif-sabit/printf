@@ -1,16 +1,17 @@
 #include "main.h"
 
 /**
- * print_capital_x_hex - prints a HEX number
+ * plxh - prints a hex number
  * @args: list of arguments
  * Return: number of characters printed
  */
 
-int print_capital_x_hex(va_list args)
+int plxh(va_list args)
 {
 	unsigned int i = va_arg(args, unsigned int);
 	int j = 0, k = 0, count = 0;
 	char *s;
+
 
 	s = malloc(sizeof(char) * 12);
 	if (s == NULL)
@@ -19,7 +20,7 @@ int print_capital_x_hex(va_list args)
 	{
 		s[j] = (i % 16) + '0';
 		if (s[j] > '9')
-			s[j] += 7;
+			s[j] += 39;
 		i /= 16;
 		j++;
 	}

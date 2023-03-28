@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * print_rot13 - prints a string in rot13
+ * pr - prints a string in rot13
  * @args: list of arguments
  * Return: number of characters printed
  */
 
-int print_rot13(va_list args)
+int pr(va_list args)
 {
 	char *s = va_arg(args, char *);
 	int i = 0, j = 0, count = 0;
