@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * check - checks if the next character is a valid specifier
  * @current_char_format: current character format[i]
