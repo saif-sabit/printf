@@ -1,10 +1,12 @@
 #include "main.h"
 /**
  * _printf - prints anything
- * @fmt: string to be printed
+ * @format: string to be printed
  * Return: number of characters printed
  */
-int _printf(const char *fmt, ...)
+
+
+int _printf(const char *format, ...)
 {
 Prints prints[] = {{"c", pc}, {"s", pls}, {"S", pcs}, {"x", plxh},
 	{"d", pint}, {"i", pint}, {"%", pp}, {"u", pu}, {"o", po},
@@ -12,15 +14,15 @@ Prints prints[] = {{"c", pc}, {"s", pls}, {"S", pcs}, {"x", plxh},
 	int i = 0, j = 0, count = 0;
 	va_list args;
 
-	va_start(args, fmt);
-	while (fmt && fmt[i])
+	va_start(args, format);
+	while (format && format[i])
 	{
-		if (fmt[i] == '%')
+		if (format[i] == '%')
 		{
 			j = 0;
-			while (prints[j].fmt)
+			while (prints[j].c)
 			{
-				if (fmt[i + 1] == *prints[j].fmt)
+				if (format[i + 1] == *prints[j].c)
 				{
 					count += prints[j].f(args);
 					i++;
@@ -28,15 +30,14 @@ Prints prints[] = {{"c", pc}, {"s", pls}, {"S", pcs}, {"x", plxh},
 				}
 				j++;
 			}
-			if (prints[j].fmt == NULL && fmt[i + 1] != ' ' && (fmt[i + 1] != '\0'))
+			if (prints[j].c == NULL && format[i + 1] != ' ')
 			{
-				_putchar(fmt[i]);
-				count++;
+				count += check(&format[i], &format[i + 1]);
 			}
 		}
 		else
 		{
-			_putchar(fmt[i]);
+			_putchar(format[i]);
 			count++;
 		}
 		i++;
