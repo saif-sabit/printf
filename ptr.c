@@ -9,11 +9,13 @@
 int ptr(char *i)
 {
 	int count = 0;
-	char *s = "nil";
+	char *s = "(nil)";
 
 	if (i == NULL)
 	{
-		count += _puts(s);
+		 
+		 _puts(s);
+		 count = 3;
 	}
 	else
 	{
