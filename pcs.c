@@ -2,41 +2,56 @@
 
 /**
  * pcs - prints a string with non-printable characters
- * @s: list of arguments
+ * @str: list of arguments
  * Return: number of characters printed
  */
 
-int pcs(char *s)
+int pcs(char *str)
 {
-	int i = 0, count = 0;
 
-	if (s == NULL)
-		s = "(null)";
-	while (s[i])
+	int i, j, k;
+	int count = 0;
+	char *hex = "0123456789abcdef";
+
+	if (str == NULL)
 	{
-		if (s[i] < 32 || s[i] >= 127)
+		str = "(null)";
+	}
+
+	for (i = 0; str[i] != '\0'; i++)
+	{
+		if (str[i] >= 32 && str[i] <= 126)
 		{
-			_putchar(92);
-			_putchar(92);
+			_putchar(str[i]);
 			count++;
-			if (s[i] < 8)
-			{
-				_putchar('0');
-				count += 2;
-			}
-			else if (s[i] < 32)
-			{
-				_putchar('0');
-				count++;
-			}
-			count += po(s[i]);
 		}
 		else
 		{
-			_putchar(s[i]);
-			count++;
+			_putchar('\\');
+			_putchar('0');
+			_putchar('x');
+			_putchar('A');
+			count += 2;
+			for (j = 0; j < 16; j++)
+			{
+				if (str[i] == hex[j])
+				{
+					_putchar(hex[j]);
+					count++;
+					break;
+				}
+			}
+			for (k = 0; k < 16; k++)
+			{
+				if (str[i + 1] == hex[k])
+				{
+					_putchar(hex[k]);
+					count++;
+					break;
+				}
+			}
 		}
-		i++;
 	}
 	return (count);
+
 }

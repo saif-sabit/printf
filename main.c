@@ -40,13 +40,18 @@ int main(void)
 	_printf("Len:[%d]\n", len);
 	printf("Len:[%d]\n", len2);
 	_printf("Unknown:[%r]\n");
-	_printf("%b\n", 98);
-	printf("%b\n", 98);
+	printf("Unknown:[%r]\n");
+
+	_printf("b: %b\n", 98);
+	printf("b: %b\n", 98);
+
+	_printf("%S\n", "Best\nSchool");
+	printf("%S\n", "Best\nSchool");
 
 	a = _printf(NULL);
 	
-	_printf("d: %d\n", a);
-	printf("d: %d\n", a);
+	_printf("a: %d\n", a);
+	printf("a: %d\n", a);
 
 	return (0);
 }
