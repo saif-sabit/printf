@@ -8,7 +8,6 @@
 
 int pint(int i) 
 {
-	//-2147483648
     int m, d;
 	unsigned int count;
 	int np =0;
