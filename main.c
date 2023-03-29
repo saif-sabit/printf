@@ -10,9 +10,22 @@
 
 int main(void)
 {
-	int len = _printf("%p", NULL);
+	int len, len2;
 
-	_printf("len: %d\n", len);
+	len = _printf("%p\n", NULL);
+	printf("len: %d\n", len);
 
+	len2 = printf("%p\n", NULL);
+	printf("len2: %d\n", len2);
+
+
+
+	//fflush(stdout);
+	// if (len != len2)
+	// {
+	// 	printf("Lengths differ.\n");
+	// 	fflush(stdout);
+	// 	return (1);
+	// }
 	return (0);
 }
