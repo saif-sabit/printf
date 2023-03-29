@@ -17,7 +17,7 @@ int ptr(char *i)
 	}
 	else
 	{
-		count += _puts("0x0");
+		count += _puts("0x");
 		count += print_hex(i);
 	}
 	return (count);
