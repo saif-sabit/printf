@@ -19,8 +19,11 @@ int pls(char *s);
 int plxh(unsigned int i);
 int po(unsigned int i);
 int pp(void);
-int ptr(unsigned long int i);
+int ptr(char *i);
 int pr(char *s);
 int pu(unsigned int i);
+
+int _puts(char *str);
+int print_hex(char *i);
 
 #endif

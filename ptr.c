@@ -6,30 +6,19 @@
  * Return: number of characters printed
  */
 
-int ptr(unsigned long int i)
+int ptr(char *i)
 {
-	int j = 0, k = 0, count = 0;
-	char *s;
+	int count = 0;
+	char *s = "(nil)(nil)";
 
-	s = malloc(sizeof(char) * 12);
-	if (s == NULL)
-		return (-1);
-	while (i > 0)
+	if (i == NULL)
 	{
-		s[j] = (i % 16) + '0';
-		if (s[j] > '9')
-			s[j] += 39;
-		i /= 16;
-		j++;
+		count += _puts(s);
 	}
-	_putchar('0');
-	_putchar('x');
-	count += 2;
-	for (k = j - 1; k >= 0; k--)
+	else
 	{
-		_putchar(s[k]);
-		count++;
+		count += _puts("0x0");
+		count += print_hex(i);
 	}
-	free(s);
 	return (count);
 }
