@@ -5,9 +5,12 @@
  * @i: list of arguments
  * Return: number of characters printed
  */
+
 int pint(int i) 
 {
-    int m, d, count;
+	//-2147483648
+    int m, d;
+	unsigned int count;
 	int np =0;
 
 	if (i < 0)
@@ -15,6 +18,10 @@ int pint(int i)
         char c ='-';
 		write(1,&c,1);
 		np++;
+		if (i == -2147483648){
+			write(1,"2147483648",10);
+			return 11;
+		}
 		m = i * -1;
 	}
 	else
