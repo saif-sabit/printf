@@ -13,7 +13,6 @@ int ptr(char *i)
 
 	if (i == NULL)
 	{
-		 
 		 _puts(s);
 		 count = 3;
 	}
