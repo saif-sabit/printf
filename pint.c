@@ -5,32 +5,34 @@
  * @i: list of arguments
  * Return: number of characters printed
  */
-
-int pint(int  i)
+int pint(int i) 
 {
-	int j = 0, k = 0, count = 0;
-	char *s;
+    int m, d, count;
+	int np =0;
 
 	if (i < 0)
 	{
-		_putchar('-');
-		i *= -1;
-		count++;
+        char c ='-';
+		write(1,&c,1);
+		np++;
+		m = i * -1;
 	}
-	s = malloc(sizeof(char) * 12);
-	if (s == NULL)
-		return (-1);
-	while (i > 0)
+	else
 	{
-		s[j] = (i % 10) + '0';
-		i /= 10;
-		j++;
+		m = i;
 	}
-	for (k = j - 1; k >= 0; k--)
+	d = m; 
+	count = 1;
+	while (d > 9)
 	{
-		_putchar(s[k]);
-		count++;
+		d /= 10; 
+		count *= 10; 
 	}
-	free(s);
-	return (count);
+	for (; count >= 1; count /= 10)
+	{
+        char ch = ((m / count) % 10) + 48; 
+		write(1,&ch,1);
+		np++;
+	}
+	return np++;
 }
