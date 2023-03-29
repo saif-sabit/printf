@@ -9,7 +9,7 @@
 int ptr(char *i)
 {
 	int count = 0;
-	char *s = "0x0";
+	char *s = "nil";
 
 	if (i == NULL)
 	{
