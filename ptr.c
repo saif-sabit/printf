@@ -9,12 +9,11 @@
 int ptr(char *i)
 {
 	int count = 0;
-	char *s = "(nil)(nil)";
+	char *s = "nil";
 
 	if (i == NULL)
 	{
-		 _puts(s);
-		 count = 3;
+		count += _puts(s);
 	}
 	else
 	{
