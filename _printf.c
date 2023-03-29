@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /**
  * _printf - prints anything
  * @format: string to be printed
@@ -9,7 +10,7 @@ int _printf(const char *format, ...)
 {
 	if (format == NULL)
 	{
-		return _putchar('\0');
+		return (-1);
 	}
 	else
 	{
@@ -112,12 +113,13 @@ int _printf(const char *format, ...)
 				}
 				default:
 				{
-					if (format[ i + 1] =='\0')
+					if (format[i + 1] == '\0')
+					{
 						return (count);
-					_putchar('%');
+					}
+					_putchar(format[i]);
 					_putchar(format[i + 1]);
 					count += 2;
-					break;
 				}
 				}
 				i++;
