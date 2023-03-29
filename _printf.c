@@ -17,6 +17,7 @@ int _printf(const char *format, ...)
 		int i = 0, count = 0;
 
 		va_list args;
+
 		va_start(args, format);
 		while (format && format[i])
 		{
@@ -27,24 +28,28 @@ int _printf(const char *format, ...)
 				case 'c':
 				{
 					char c = va_arg(args, int);
+
 					count += pc(c);
 					break;
 				}
 				case 's':
 				{
 					char *s = va_arg(args, char *);
+
 					count += pls(s);
 					break;
 				}
 				case 'S':
 				{
 					char *s = va_arg(args, char *);
+
 					count += pcs(s);
 					break;
 				}
 				case 'x':
 				{
 					unsigned int d = va_arg(args, unsigned int);
+
 					count += plxh(d);
 					break;
 				}
@@ -52,6 +57,7 @@ int _printf(const char *format, ...)
 				case 'i':
 				{
 					int d = va_arg(args, int);
+
 					count += pint(d);
 					break;
 				}
@@ -63,24 +69,28 @@ int _printf(const char *format, ...)
 				case 'u':
 				{
 					unsigned int d = va_arg(args, unsigned int);
+
 					count += pu(d);
 					break;
 				}
 				case 'o':
 				{
 					unsigned int d = va_arg(args, unsigned int);
+
 					count += po(d);
 					break;
 				}
 				case 'X':
 				{
 					unsigned int d = va_arg(args, unsigned int);
+
 					count += pcxh(d);
 					break;
 				}
 				case 'b':
 				{
 					unsigned int d = va_arg(args, unsigned int);
+
 					count += pb(d);
 					break;
 				}
@@ -94,6 +104,7 @@ int _printf(const char *format, ...)
 				case 'R':
 				{
 					char *s = va_arg(args, char *);
+
 					count += pr(s);
 					break;
 				}
