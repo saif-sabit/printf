@@ -24,7 +24,6 @@ int ptr(unsigned long int i)
 	}
 	_putchar('0');
 	_putchar('x');
-	_putchar('0');
 	count += 2;
 	for (k = j - 1; k >= 0; k--)
 	{
