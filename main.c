@@ -10,7 +10,9 @@
 
 int main(void)
 {
-	_printf("%p\n", NULL);
+	int len = _printf("%p", NULL);
+
+	_printf("len: %d\n", len);
 
 	return (0);
 }
