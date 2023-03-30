@@ -1,15 +1,16 @@
 #include "main.h"
 
 /**
- * pcxh - prints a HEX number
+ * prints_lowercase_hex - prints a number in lowercase hexadecimal
  * @i: list of arguments
  * Return: number of characters printed
  */
 
-int pcxh(unsigned int i)
+int prints_lowercase_hex(unsigned int i)
 {
 	int j = 0, k = 0, count = 0;
 	char *s;
+
 
 	s = malloc(sizeof(char) * 12);
 	if (s == NULL)
@@ -18,7 +19,7 @@ int pcxh(unsigned int i)
 	{
 		s[j] = (i % 16) + '0';
 		if (s[j] > '9')
-			s[j] += 7;
+			s[j] += 39;
 		i /= 16;
 		j++;
 	}

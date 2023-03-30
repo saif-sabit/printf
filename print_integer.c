@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * pint - prints an integer
+ * print_integer - prints an integer
  * @i: list of arguments
  * Return: number of characters printed
  */
 
-int pint(int i) 
+int print_integer(int i) 
 {
     int m, d;
 	unsigned int count;

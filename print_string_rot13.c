@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * pr - prints a string in rot13
+ * print_string_rot13 - prints a string in rot13
  * @s: list of arguments
  * Return: number of characters printed
  */
 
-int pr(char *s)
+int print_string_rot13(char *s)
 {
 	int i = 0, j = 0, count = 0;
 	char *alpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";

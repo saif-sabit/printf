@@ -1,0 +1,74 @@
+int case_c(va_list args)
+{
+	return print_character(va_arg(args, int));
+}
+
+int case_s(va_list args)
+{
+	char *s = va_arg(args, char *);
+
+	return print_lowercase_string(s);
+}
+
+int case_S(va_list args)
+{
+	char *s = va_arg(args, char *);
+
+	return print_uppercase_string(s);
+}
+
+int case_d_case_i(va_list args)
+{
+	int d = va_arg(args, int);
+
+	return print_integer(d);
+}
+
+int case_x(va_list args)
+{
+	char *s = va_arg(args, char *);
+
+	return print_hex_number(s);
+}
+
+int case_u(va_list args)
+{
+	unsigned int d = va_arg(args, unsigned int);
+
+	return prints_unsigned_integer(d);
+}
+
+int case_o(va_list args)
+{
+	unsigned int d = va_arg(args, unsigned int);
+
+	return prints_octal_number(d);
+}
+
+int case_X(va_list args)
+{
+	unsigned int d = va_arg(args, unsigned int);
+
+	return prints_uppercase_hex(d);
+}
+
+int case_b(va_list args)
+{
+	unsigned int d = va_arg(args, unsigned int);
+
+	return prints_binary(d);
+}
+
+int case_p(va_list args)
+{
+	char *s = va_arg(args, char *);
+
+	return prints_pointer(s);
+}
+
+int case_R(va_list args)
+{
+	char *s = va_arg(args, char *);
+
+	return print_string_rot13(s);
+}

@@ -3,12 +3,12 @@
 #include "main.h"
 
 /**
- * po - prints an octal number
+ * prints_octal_number - prints an octal number
  * @i: list of arguments
  * Return: number of characters printed
  */
 
-int po(unsigned int i)
+int prints_octal_number(unsigned int i)
 {
 	int j = 0, k = 0, count = 0;
 	char *s;

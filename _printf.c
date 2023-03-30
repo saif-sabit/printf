@@ -6,6 +6,7 @@
  * Return: number of characters printed
  */
 
+
 int _printf(const char *format, ...)
 {
 	if (format == NULL)
@@ -29,28 +30,28 @@ int _printf(const char *format, ...)
 				{
 					char c = va_arg(args, int);
 
-					count += pc(c);
+					count += print_character(c);
 					break;
 				}
 				case 's':
 				{
 					char *s = va_arg(args, char *);
 
-					count += pls(s);
+					count += print_lowercase_string(s);
 					break;
 				}
 				case 'S':
 				{
 					char *s = va_arg(args, char *);
 
-					count += pcs(s);
+					count += print_uppercase_string(s);
 					break;
 				}
 				case 'x':
 				{
 					unsigned int d = va_arg(args, unsigned int);
 
-					count += plxh(d);
+					count += prints_lowercase_hex(d);
 					break;
 				}
 				case 'd':
@@ -58,54 +59,54 @@ int _printf(const char *format, ...)
 				{
 					int d = va_arg(args, int);
 
-					count += pint(d);
+					count += print_integer(d);
 					break;
 				}
 				case '%':
 				{
-					count += pp();
+					count += prints_percent_sign();
 					break;
 				}
 				case 'u':
 				{
 					unsigned int d = va_arg(args, unsigned int);
 
-					count += pu(d);
+					count += prints_unsigned_integer(d);
 					break;
 				}
 				case 'o':
 				{
 					unsigned int d = va_arg(args, unsigned int);
 
-					count += po(d);
+					count += prints_octal_number(d);
 					break;
 				}
 				case 'X':
 				{
 					unsigned int d = va_arg(args, unsigned int);
 
-					count += pcxh(d);
+					count +=  prints_uppercase_hex(d);
 					break;
 				}
 				case 'b':
 				{
 					unsigned int d = va_arg(args, unsigned int);
 
-					count += pb(d);
+					count += prints_binary(d);
 					break;
 				}
 				case 'p':
 				{
 					char *d = va_arg(args, char *);
 
-					count += ptr(d);
+					count += prints_pointer(d);
 					break;
 				}
 				case 'R':
 				{
 					char *s = va_arg(args, char *);
 
-					count += pr(s);
+					count += print_string_rot13(s);
 					break;
 				}
 				default:

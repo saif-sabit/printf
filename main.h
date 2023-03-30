@@ -12,22 +12,21 @@
 
 int _printf(const char *format, ...);
 int _putchar(char c);
-int check(const char *c0, const char *c1);
-
-int pb(unsigned int i);
-int pcs(char *s);
-int pcxh(unsigned int i);
-int pc(char c);
-int pint(int i);
-int pls(char *s);
-int plxh(unsigned int i);
-int po(unsigned int i);
-int pp(void);
-int ptr(char *i);
-int pr(char *s);
-int pu(unsigned int i);
-
 int _puts(char *str);
-int print_hex(char *i);
+
+int print_integer(int d);
+int print_character(char c);
+int print_uppercase_string(char *s);
+int print_lowercase_string(char *s);
+int print_string_rot13(char *s);
+
+int prints_binary(unsigned int i);
+int prints_uppercase_hex(unsigned int i);
+int prints_lowercase_hex(unsigned int i);
+int prints_octal_number(unsigned int i);
+int prints_percent_sign(void);
+int prints_pointer(char *i);
+int prints_unsigned_integer(unsigned int i);
+int print_hex_number(char *i);
 
 #endif

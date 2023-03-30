@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * pls - prints a string
+ * print_lowercase_string - prints a string in lowercase
  * @s: list of arguments
  * Return: number of characters printed
  */
 
-int pls(char *s)
+int print_lowercase_string(char *s)
 {
 	int i = 0;
 

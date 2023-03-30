@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * pb - prints a binary number
+ * prints_binary - prints a binary number
  * @i: list of arguments
  * Return: number of characters printed
  */
 
-int pb(unsigned int i)
+int prints_binary(unsigned int i)
 {
 	int j = 0, k = 0, count = 0;
 	char *s;

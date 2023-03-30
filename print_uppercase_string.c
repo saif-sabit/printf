@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * pcs - prints a string with non-printable characters
+ * print_uppercase_string - prints a string in uppercase
  * @str: list of arguments
  * Return: number of characters printed
  */
 
-int pcs(char *str)
+int print_uppercase_string(char *str)
 {
 	int i = 0;
 	int j = 0;

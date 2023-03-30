@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * pp - prints a percent sign
+ * prints_percent_sign - prints a percent sign
  * Return: number of characters printed
  */
 
-int pp(void)
+int prints_percent_sign(void)
 {
 	_putchar('%');
 	return (1);
