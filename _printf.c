@@ -92,6 +92,15 @@ int _printf(const char *format, ...)
 				{
 					unsigned int d = va_arg(args, unsigned int);
 
+					if (d == 0)
+					{
+						_putchar('0');
+						count++;
+						break;
+					}
+
+					
+
 					count += prints_binary(d);
 					break;
 				}

@@ -7,16 +7,13 @@
  *
  * Return: 0 on success, error code otherwise
  */
+
 int main(void)
 {
 	int len, len2;
 
 	len = _printf("%b", 0);
 	len2 = printf("0");
-
-	_printf("%d\n", len);
-	printf("%d\n", len2);
-
 	fflush(stdout);
 	if (len != len2)
 	{
