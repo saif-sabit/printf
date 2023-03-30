@@ -1,3 +1,4 @@
+#include <limits.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include "main.h"
@@ -5,16 +6,30 @@
 /**
  * main - Entry point
  *
- * Return: 0 on success, error code otherwise
+ * Return: Always 0 (Success)
  */
-
 int main(void)
 {
+	char *s;
+	int i;
 	int len, len2;
 
-	len = _printf("%b", 0);
-	len2 = printf("0");
+	s = malloc(1020);
+	i = 0;
+	while (i < 1019)
+	{
+		s[i] = 'A';
+		i++;
+	}
+	s[i] = 0;
+	len = _printf("%s%b\n", s, INT_MAX);
+	len2 = printf("%s%s\n", s, "1111111111111111111111111111111");
+
+	_printf("len: %d\n", len);
+	printf("len2: %d\n", len2);
+
 	fflush(stdout);
+	free(s);
 	if (len != len2)
 	{
 		printf("Lengths differ.\n");
