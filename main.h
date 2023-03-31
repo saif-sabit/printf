@@ -28,5 +28,5 @@ int prints_percent_sign(void);
 int prints_pointer(char *i);
 int prints_unsigned_integer(unsigned int i);
 int print_hex_number(char *i);
-
+int _prev(char *s);
 #endif
