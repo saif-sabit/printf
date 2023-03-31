@@ -118,6 +118,13 @@ int _printf(const char *format, ...)
 					count += print_string_rot13(s);
 					break;
 				}
+				case 'r':
+				{
+					char *s = va_arg(args, char *);
+
+					count += _prev(s);
+					break;
+				}
 				default:
 				{
 					
